@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhrab0prtx76f"]
+
+[ext_resource type="Script" path="res://Scenes/instrucciones.gd" id="1_fdujx"]
+[ext_resource type="Texture2D" uid="uid://byyot8o7y8k83" path="res://Imagenes/la-imagen-y-su-importancia-para-comunicar-la noche-estrellada-vincent-van-gogh(1).jpeg" id="2_idrkk"]
+
+[node name="INSTRUCCIONES" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fdujx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 1000.0
+texture = ExtResource("2_idrkk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -72.5
+offset_right = 138.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 23
+
+[node name="VOLVER" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[connection signal="pressed" from="VBoxContainer/VOLVER" to="." method="_on_volver_pressed"]
