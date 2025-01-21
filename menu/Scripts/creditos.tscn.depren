@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://0pyokl4m3oke"]
+
+[ext_resource type="Script" path="res://Scenes/creditos.gd" id="1_yppfm"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yppfm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.5
+offset_right = 175.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "REALIZADO POR RAFAEL HERRERO CARRIÓN "
