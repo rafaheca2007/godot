@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b14fi4ac4kq61"]
-
-[ext_resource type="AudioStream" uid="uid://v0h0ivg4h3gj" path="res://musica/DELLAFUENTE - 13 Preguntas (Visualizer)  TORII YAMA.mp3" id="1_4hcyu"]
-
-[node name="global" type="Node2D"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_4hcyu")
-volume_db = -19.863
