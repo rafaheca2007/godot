@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://gn2pvgqec0kq"]
+
+[ext_resource type="Script" path="res://Scripts/juego.gd" id="1_3qs22"]
+[ext_resource type="Texture2D" uid="uid://wnid28wv5uuj" path="res://Imagenes/jugar.png" id="1_md7q7"]
+[ext_resource type="AudioStream" uid="uid://cc2c7t43d3c2k" path="res://Musica/musica juego.mp3" id="3_435yf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2tn1"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byij0"]
+bg_color = Color(0.823529, 0, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkpwq"]
+bg_color = Color(0.372549, 0.372549, 0.372549, 0)
+
+[node name="Juego" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qs22")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_md7q7")
+
+[node name="EXPLICACIÓN" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Ahora la consola arrancaría el juego para jugar"
+
+[node name="VOLVER" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -86.0
+offset_right = -20.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 39
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2tn1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_byij0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkpwq")
+text = "VOLVER"
+
+[node name="musica juego" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_435yf")
+autoplay = true
+
+[connection signal="pressed" from="VOLVER" to="." method="_on_volver_pressed"]
