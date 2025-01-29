@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cdd65wams3s8"]
+
+[node name="Mapa Formula 1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 166.0
+offset_bottom = 130.0
