@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd5xfklvuto8h"
+path="res://.godot/imported/musica creditos.mp3-54cca47b877f2e3eef9ec0f9dc157de5.mp3str"
+
+[deps]
+
+source_file="res://Musica/musica creditos.mp3"
+dest_files=["res://.godot/imported/musica creditos.mp3-54cca47b877f2e3eef9ec0f9dc157de5.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
