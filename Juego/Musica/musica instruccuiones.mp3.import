@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bowhd4y4btcl4"
+path="res://.godot/imported/musica instruccuiones.mp3-72938db7d1870ec1435f0cf61ace3cdd.mp3str"
+
+[deps]
+
+source_file="res://Musica/musica instruccuiones.mp3"
+dest_files=["res://.godot/imported/musica instruccuiones.mp3-72938db7d1870ec1435f0cf61ace3cdd.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
