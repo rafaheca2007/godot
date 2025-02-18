@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn1kj32jwiu5i"]
+
+[ext_resource type="PackedScene" uid="uid://bqpmqjhvgvho2" path="res://Escenas/rueda.tscn" id="1_l7hys"]
+[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_p2frl"]
+[ext_resource type="Texture2D" uid="uid://bnyt13h5hxgik" path="res://Imagenes/Car.png" id="2_f5wlm"]
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource("1_p2frl")
+
+[node name="Rueda" type="PinJoint2D" parent="."]
+node_a = NodePath("..")
+
+[node name="Rueda2" parent="Rueda" instance=ExtResource("1_l7hys")]
+position = Vector2(-491, -291)
+
+[node name="Rueda2" parent="Rueda/Rueda2" instance=ExtResource("1_l7hys")]
+position = Vector2(-261, -3)
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(-228, -160)
+texture = ExtResource("2_f5wlm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-455, -207, -455, -85, -462, -82, -462, -67, -420, -60, -406, -98, -379, -108, -366, -107, -357, -98, -352, -90, -352, -79, -350, -68, -344, -60, -155, -58, -156, -79, -149, -94, -144, -103, -132, -105, -112, -108, -101, -105, -94, -99, -88, -89, -86, -83, -84, -71, -84, -65, -87, -60, -8, -58, -12, -166, -68, -194, -115, -209, -171, -218, -223, -219, -240, -192, -318, -190, -357, -222, -434, -221)

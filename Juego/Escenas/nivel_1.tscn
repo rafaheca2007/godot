@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bilgsolksofpg"]
+
+[ext_resource type="PackedScene" uid="uid://cn1kj32jwiu5i" path="res://Escenas/jugador.tscn" id="1_70xmy"]
+
+[node name="Nivel 1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(311, 158, 1427, -56, 1655, -163, 1737, 268, 1412, 614, 878, 735, 172, 814, -726, 646, -1161, 169, -1139, -188, -833, -394, -416, -469, -270, -377, -298, -238, -291, -91, -156, -9)
+
+[node name="Player" parent="." instance=ExtResource("1_70xmy")]
+position = Vector2(675, 97)
+gravity_scale = 9.8
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-675, -97)
+offset = Vector2(0, 90.8)
+ignore_rotation = false
