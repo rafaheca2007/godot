@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6w0ky7d3fi6q"
+path="res://.godot/imported/partida ganada.mp3-970f4c8edc20d27f0d283259fddb228c.mp3str"
+
+[deps]
+
+source_file="res://Sonido/partida ganada.mp3"
+dest_files=["res://.godot/imported/partida ganada.mp3-970f4c8edc20d27f0d283259fddb228c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
