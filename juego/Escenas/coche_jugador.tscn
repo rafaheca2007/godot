@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c537asmuf0cr1"]
-
-[ext_resource type="Script" path="res://Scripts/coche_jugador.gd" id="1_sjtk6"]
-
-[node name="Coche Jugador" type="Node2D"]
-script = ExtResource("1_sjtk6")
