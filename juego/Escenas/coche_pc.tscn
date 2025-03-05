@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4xifg0rp72ht"]
+
+[ext_resource type="Script" path="res://Scripts/coche_pc.gd" id="1_i63ee"]
+
+[node name="coche pc" type="Node2D"]
+script = ExtResource("1_i63ee")
