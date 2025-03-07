@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://ul35tuus4u5w"]
+
+[ext_resource type="Script" path="res://Scripts/circuito.gd" id="1_6fdly"]
+[ext_resource type="Texture2D" uid="uid://y4owhay61p86" path="res://Imagenes/Circuito.jpg" id="2_5ucum"]
+[ext_resource type="PackedScene" uid="uid://y6wvk8xecwvg" path="res://Escenas/coche_jugadort.tscn" id="3_ehdfe"]
+[ext_resource type="PackedScene" uid="uid://4xifg0rp72ht" path="res://Escenas/coche_pc.tscn" id="4_gqndw"]
+
+[node name="circuito" type="Node2D"]
+script = ExtResource("1_6fdly")
+aceleracion = null
+freno = null
+max_velocidad = null
+rotacion_velocidad = null
+friccion = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1185, 672.25)
+scale = Vector2(2.33887, 2.23248)
+texture = ExtResource("2_5ucum")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D pequeño" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(925, 431, 1441, 431, 1470, 434, 1493, 440, 1542, 460, 1583, 488, 1639, 555, 1661, 608, 1666, 705, 1650, 758, 1606, 827, 1565, 862, 1514, 891, 1470, 902, 1449, 906, 921, 907, 865, 897, 829, 882, 785, 855, 742, 811, 714, 767, 696, 699, 702, 612, 728, 552, 766, 502, 827, 459, 893, 438)
+
+[node name="CollisionPolygon2D2 grande" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(907, 285, 1469, 283, 1521, 293, 1570, 309, 1615, 330, 1659, 358, 1689, 379, 1716, 407, 1754, 451, 1778, 492, 1805, 552, 1822, 623, 1822, 707, 1814, 763, 1797, 811, 1774, 857, 1750, 894, 1700, 949, 1637, 997, 1569, 1030, 1525, 1046, 1454, 1056, 927, 1058, 861, 1049, 793, 1029, 745, 1008, 696, 977, 652, 940, 612, 890, 577, 829, 554, 774, 541, 718, 540, 655, 545, 602, 560, 536, 592, 476, 634, 412, 668, 382, 734, 336, 793, 307, 851, 295)
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D"]
+position = Vector2(-2289, 0)
+scale = Vector2(3.33333, 1)
+points = PackedVector2Array(992, 283, 991, 426)
+
+[node name="coche jugador" parent="." instance=ExtResource("3_ehdfe")]
+position = Vector2(1711, 769)
+rotation = -3.12957
+
+[node name="coche pc" parent="." instance=ExtResource("4_gqndw")]
+position = Vector2(1702, 718)
+rotation = -3.09602
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="coche pc"]

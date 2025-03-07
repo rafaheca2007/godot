@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://oape4q7v13b4"]
+
+[ext_resource type="AudioStream" uid="uid://dof1bi6wbgrah" path="res://Sonido/bootonclik.mp3" id="1_3h3yc"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_30x1r"]
+
+[node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_30x1r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1001.0
+offset_top = 486.0
+offset_right = 1102.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 31
+text = "MENÚ"
+
+[node name="sonido menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_3h3yc")
+
+[node name="reiniciar" type="Button" parent="."]
+layout_mode = 2
+offset_left = 969.0
+offset_top = 563.0
+offset_right = 1127.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 31
+text = "REINICIAR"
+
+[node name="sonido reiniciar" type="AudioStreamPlayer" parent="reiniciar"]
+stream = ExtResource("1_3h3yc")
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="reiniciar" to="." method="_on_reiniciar_pressed"]
