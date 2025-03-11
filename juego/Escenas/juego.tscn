@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://gn2pvgqec0kq"]
+
+[ext_resource type="Script" path="res://Scripts/juego.gd" id="1_3qs22"]
+[ext_resource type="PackedScene" uid="uid://ul35tuus4u5w" path="res://Escenas/circuito.tscn" id="2_8wyvx"]
+
+[node name="Juego" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qs22")
+
+[node name="circuito" parent="." instance=ExtResource("2_8wyvx")]
