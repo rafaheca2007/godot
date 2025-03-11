@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnppxrts3pfgh"]
+
+[ext_resource type="Script" path="res://Scripts/registro_de_puntos.gd" id="1_r4wg6"]
+
+[node name="registro de puntos" type="Node2D"]
+script = ExtResource("1_r4wg6")

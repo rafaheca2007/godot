@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4xifg0rp72ht"]
+
+[ext_resource type="Script" path="res://Scripts/coche_pc.gd" id="1_4jsyw"]
+[ext_resource type="Texture2D" uid="uid://b6eexgbtgncxe" path="res://Imagenes/Cocheverde.png" id="2_6104i"]
+
+[node name="coche pc" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4jsyw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(819.1, 385.525)
+scale = Vector2(0.0759135, 0.0861896)
+texture = ExtResource("2_6104i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+position = Vector2(233.1, 22.9)
+polygon = PackedVector2Array(552, 350, 562, 350, 562, 354, 603, 354, 603, 352, 614, 352, 614, 354, 622, 354, 622, 380, 614, 380, 614, 383, 604, 383, 604, 380, 562, 380, 562, 383, 552, 383, 552, 377, 545, 377, 545, 356, 551, 356)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
